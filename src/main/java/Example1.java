@@ -1,6 +1,10 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class Example1 {
 
@@ -27,11 +31,20 @@ public class Example1 {
 
 
         driver.findElement(By.xpath("//*[contains(text() ,\"Sign In\")]")).click();
+        // we are using thread.sleep here
         Thread.sleep(5000);
-        // we need 
-        String errorMsg = driver.findElement(By.xpath("//p[@class='error']")).getText();
 
-        System.out.println(errorMsg);
+        // we are using explicit wait here by creating the object of webdriverwait class .
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(5000));
+        String explicterrmsg= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='error']"))).getText();
+
+
+        System.out.println(explicterrmsg);
+
+// use this for thread.sleep
+        //String errorMsg = driver.findElement(By.xpath("//p[@class='error']")).getText();
+
+        //System.out.println(errorMsg);
 
 
         // close only the current window
