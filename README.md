@@ -76,8 +76,22 @@ input[text='text']:nth-child(2)
 
 the same index maynot be the accurate one beetween the xpath and css because their might be some hidden attributes . 
 
+TRAVERSING FORM THE PARENT TO CHILD : 
+
+If you want to traverse from Parent to child start with the following : 
+
+//head/a/b (double // slash followed by single / slash)
+
+give the index number if needed . 
 
 
+TRAVERSING FROM PARENT TO CHILD : 
+USING XPATH : 
+
+//form/a/b
+USING CSS PATH : 
+
+parenttag name space childtagname 
 
 Selenium Wait Types : 
 
@@ -189,6 +203,14 @@ WebDriver driver = new ChromeDriver();
         driver.quit();
     }
 }
+
+
+
+If you get any element click error use explict wait element to be clickable () method 
+
+refer this : https://stackoverflow.com/questions/62260511/org-openqa-selenium-elementclickinterceptedexception-element-click-intercepted
+
+
 
 
 
