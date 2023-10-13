@@ -93,11 +93,36 @@ USING CSS PATH :
 
 parenttag name space childtagname 
 
+
+XPATH Sibling traversals : 
+
+
+Find more about the Xpaths Here 
+
+https://www.guru99.com/xpath-selenium.html
+
+
+difference Beetween / and // in XPATH : 
+
+
+/ is used for selecting elements that are direct children of the current element, specifying a strict parent-child relationship.
+// is used for selecting elements anywhere in the document, without regard to their depth or position in the hierarchy.
+
+
+
+WINDOWS NAVIGATIONS : 
+
+
+refer WindwsClass.java
+[WindowClass.java]
+
+Using the selenium Methods to Navigate the Browser like going back and front like that . 
+run in maximize mode Like that . 
 Selenium Wait Types : 
 
 In Selenium, "waits" are used to ensure that the WebDriver waits for a certain condition to be met before proceeding with the next step in test automation. Waiting is important because web applications often have asynchronous behavior, and elements may not be immediately available or ready to interact with. Selenium provides several types of waits to handle different scenarios:
 
-Implicit Wait:
+1.Implicit Wait:
 
 Implicit waits are used to specify a default wait time for the WebDriver to wait for an element to become available before throwing an exception.
 The WebDriver waits for the specified amount of time for an element to appear or become clickable before performing actions on it.
@@ -209,6 +234,7 @@ WebDriver driver = new ChromeDriver();
 If you get any element click error use explict wait element to be clickable () method 
 
 refer this : https://stackoverflow.com/questions/62260511/org-openqa-selenium-elementclickinterceptedexception-element-click-intercepted
+
 
 
 
