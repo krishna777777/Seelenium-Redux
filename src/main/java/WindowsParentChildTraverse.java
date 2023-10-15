@@ -17,6 +17,7 @@ public class WindowsParentChildTraverse {
 
 
      WebElement click =    driver.findElement(By.xpath("//*[contains(@class,'blinkingText')]"));
+
       //  driver.findElement(By.xpath("//*[contains(@class,'blinkingText')]"));
 
         Actions actions = new Actions(driver);

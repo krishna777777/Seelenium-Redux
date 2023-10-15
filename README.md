@@ -236,7 +236,19 @@ If you get any element click error use explict wait element to be clickable () m
 refer this : https://stackoverflow.com/questions/62260511/org-openqa-selenium-elementclickinterceptedexception-element-click-intercepted
 
 
+STATIC DropDowns : 
 
+Select dropdowns are Static these are used to handle the Dropdowns . 
+
+// Syntax : 
+Select dropdown = new Select(WebElement)
+use the drop down object and perform the various operations . 
+
+
+
+Dynamic Dropdowns : 
+
+It will load only after a Particular element is Loaded .
 
 
 
