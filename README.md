@@ -251,6 +251,12 @@ Dynamic Dropdowns :
 It will load only after a Particular element is Loaded .
 
 
+See if the particular element is Present or not : 
+
+In selenium be had the element isDisplayed() // but what happend was It was Throwing Inconsistent results in the current HTMl dom elements 
+
+
+
 
 
 

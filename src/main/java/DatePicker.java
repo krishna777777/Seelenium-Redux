@@ -9,7 +9,8 @@ import java.time.Duration;
 public class DatePicker {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5000));
+        WebDriverWait wait = new WebDriverWait(driver,
+                Duration.ofSeconds(5000));
 
         driver.get("https://seleniumpractise.blogspot.com/2016/08/how-to-handle-calendar-in-selenium.html");
 
@@ -27,8 +28,11 @@ public class DatePicker {
                 break;
             } else if (year1.equals(desiredYear) && month1.compareTo(desiredMonth) < 0) {
                 driver.findElement(By.className("ui-icon-circle-triangle-e")).click();
-            } else {
+            } else if (year1.equals(desiredYear) && month1.compareTo(desiredMonth) > 0) {
                 driver.findElement(By.className("ui-icon-circle-triangle-w")).click();
+            } else {
+                // If year1 is not equal to desiredYear, go forward
+                driver.findElement(By.className("ui-icon-circle-triangle-e")).click();
             }
 
             // Wait for the changes to take effect
@@ -38,5 +42,3 @@ public class DatePicker {
         driver.quit();
     }
 }
-
-
