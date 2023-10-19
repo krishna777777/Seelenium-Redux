@@ -256,6 +256,11 @@ See if the particular element is Present or not :
 In selenium be had the element isDisplayed() // but what happend was It was Throwing Inconsistent results in the current HTMl dom elements 
 
 
+HANDLING ALERTS : 
+
+in Selenium we cannot handle the alerts those are not part of HTML DOM it is Javascript . 
+we can switch the context from driver browser to Alert 
+driver.switchTo().alert 
 
 
 
