@@ -1,0 +1,32 @@
+see this for reference :
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+import java.util.List;
+
+public class CartItemsAddingMultipleDatasets {
+    public static void main(String args[]) {
+
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://rahulshettyacademy.com/seleniumPractise#/");
+
+        String[] productsToSelect = {"Cucumber", "Beetroot"};
+
+        List<WebElement> elements = driver.findElements(By.xpath("//h4[@class='product-name']"));
+
+        for (String product : productsToSelect) {
+            for (int i = 0; i < elements.size(); i++) {
+                String text = elements.get(i).getText();
+                if (text.contains(product)) {
+                    List<WebElement> addToCartButtons = driver.findElements(By.xpath("//button[text()='ADD TO CART']"));
+                    addToCartButtons.get(i).click();
+                    break; // You can remove this if you want to select all occurrences of the product.
+                }
+            }
+        }
+    }
+}
